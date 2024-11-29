@@ -1,10 +1,24 @@
 {{ define "main" }}
   <h1>{{ .Title }}</h1>
-
-  {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-  {{ $dateHuman := .Date | time.Format ":date_long" }}
-  <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
-
+  <dl>
+    {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+    {{ $dateHuman := .Date | time.Format ":date_medium" }}
+    <dt><svg height="1em" viewbox="0 0 24 24" title="{{ T "date_is" }}" aria-label="{{ T "date_is" }}">{{ readFile "assets/feather/icons/plus.svg" | safeHTML}}</svg></dt><dd><time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></dd>
+    {{ if ne .Lastmod .Date }}
+    {{ $dateMachine := .Lastmod | time.Format "2006-01-02T15:04:05-07:00" }}
+    {{ $dateHuman := .Lastmod | time.Format ":date_medium" }}
+    <dt><svg height="1em" viewbox="0 0 24 24" title="{{ T "lastmod_is" }}" aria-label="{{ T "lastmod_is" }}"></svg>>{{ readFile "assets/feather/icons/refresh-cw.svg" | safeHTML}}</svg></dt><dd><time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></dd>
+    {{ end }}
+    {{- with .GetTerms "tags" }}
+    <dt><svg height="1em" viewbox="0 0 24 24" title="{{ T "tags" }}" aria-label="{{ T "tags" }}">{{ readFile "assets/feather/icons/tag.svg" | safeHTML}}</svg></dt>
+    <dd>
+      <ul>
+      {{- range . }}
+        <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+      {{- end }}
+      </ul>
+    </dd>
+    {{- end }}
+  </dl>
   {{ .Content }}
-  {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 {{ end }}

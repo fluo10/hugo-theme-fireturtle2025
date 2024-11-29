@@ -1,0 +1,15 @@
+[date_is]
+other = 'Posted at'
+[lastmod_is]
+other = 'Updated at'
+[current_language]
+other = 'Current language'
+[translations]
+one = 'Other translation'
+other = 'Other translations'
+[tags]
+one = 'Tag'
+other = 'Tags'
+[categories]
+one = 'Category'
+other = 'Category'

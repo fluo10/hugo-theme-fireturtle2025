@@ -1,0 +1,12 @@
+[date_is]
+other = '投稿日'
+[lastmod_is]
+other = '更新日'
+[current_language]
+other = '現在の言語'
+[translations]
+other = '他の言語'
+[tags]
+other = 'タグ'
+[categories]
+other = 'カテゴリ'
