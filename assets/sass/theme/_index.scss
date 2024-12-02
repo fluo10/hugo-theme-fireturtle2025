@@ -1,5 +1,12 @@
+@use "../../everforest-sass/everforest-dark";
+body {
+    background-color: everforest-dark.$bg0;
+    color: everforest-dark.$fg;
+    fill: everforest-dark.$fg;
+}
 .sidebar {
-    background-color: black;
-    color: white;
-    fill: white;
+    background-color: everforest-dark.$bg_green;
+}
+a {
+    color: everforest-dark.$blue;
 }

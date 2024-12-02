@@ -4,3 +4,9 @@
 [submodule "assets/ionicons"]
 	path = assets/ionicons
 	url = https://github.com/ionic-team/ionicons.git
+[submodule "assets/modern-normalize"]
+	path = assets/modern-normalize
+	url = https://github.com/sindresorhus/modern-normalize.git
+[submodule "assets/everforest-sass"]
+	path = assets/everforest-sass
+	url = https://github.com/fluo10/everforest-sass.git
