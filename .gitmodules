@@ -1,3 +1,6 @@
-[submodule "assets/feather"]
-	path = assets/feather
-	url = https://github.com/feathericons/feather.git
+[submodule "assets/simple-icons"]
+	path = assets/simple-icons
+	url = https://github.com/simple-icons/simple-icons.git
+[submodule "assets/ionicons"]
+	path = assets/ionicons
+	url = https://github.com/ionic-team/ionicons.git

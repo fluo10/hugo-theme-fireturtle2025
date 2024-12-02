@@ -1,0 +1,8 @@
+@use "pc";
+@use "common";
+@media (min-width: 48em) {
+    @include pc.pc;
+}
+html {
+    //padding: 1px;
+}

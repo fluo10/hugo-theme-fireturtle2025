@@ -1,9 +1,13 @@
+@use "theme";
+@use "module";
+@use "layout";
+
 body {
   color: #222;
   font-family: sans-serif;
   line-height: 1.5;
-  margin: 1rem;
-  max-width: 768px;
+  margin: 0;
+  padding: 0;
 }
 
 header {
