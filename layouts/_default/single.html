@@ -1,9 +1,10 @@
 {{ define "main" }}
+  <article>
   <h1>{{ .Title }}</h1>
   <dl>
     {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
     {{ $dateHuman := .Date | time.Format ":date_medium" }}
-    <dt><svg height="1em" viewbox="0 0 512 512" title="{{ T "date_is" }}" aria-label="{{ T "date_is" }}" style="fill: black;">{{ readFile "assets/ionicons/src/svg/add-circle.svg" | safeHTML}}</svg></dt><dd><time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></dd>
+    <dt><svg height="1em" viewbox="0 0 512 512" title="{{ T "date_is" }}" aria-label="{{ T "date_is" }}">{{ readFile "assets/ionicons/src/svg/add-circle.svg" | safeHTML}}</svg></dt><dd><time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></dd>
     {{ if ne .Lastmod .Date }}
     {{ $dateMachine := .Lastmod | time.Format "2006-01-02T15:04:05-07:00" }}
     {{ $dateHuman := .Lastmod | time.Format ":date_medium" }}
@@ -21,4 +22,5 @@
     {{- end }}
   </dl>
   {{ .Content }}
+  </article>
 {{ end }}

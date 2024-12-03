@@ -1,9 +1,10 @@
+@use "base";
 @use "theme";
 @use "module";
 @use "layout";
 
+
 body {
-  font-family: sans-serif;
   line-height: 1.5;
   margin: 0;
   padding: 0;
@@ -19,6 +20,3 @@ footer {
   margin-top: 1rem;
 }
 
-a {
-  text-decoration: none;
-}

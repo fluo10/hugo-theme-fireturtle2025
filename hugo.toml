@@ -1,5 +1,5 @@
 baseURL = 'https://example.org/'
-title = 'My New Hugo Site'
+title = 'Fireturtle2025'
 defaultContentLanguage = "en"
 [[menus.main]]
 name = 'Home'
@@ -32,3 +32,6 @@ languageName = "日本語"
 [[params.socialIcons]]
 icon= "github.svg"
 url= "https://github.com/fluo10/hugo-theme-fireturtle2025.git"
+
+[markup.highlight]
+noClasses = false

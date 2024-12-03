@@ -1,8 +1,16 @@
 @use "pc";
 @use "common";
-@media (min-width: 48em) {
-    @include pc.pc;
+@use "home";
+@use "sp";
+
+body:not(.home) {
+    @media (min-width: 48em) {
+        @include pc.body;
+    }
+    @media not (min-width: 48em) {
+        @include sp.body;
+    }
 }
-html {
-    //padding: 1px;
+body.home{
+    @include home.body;
 }

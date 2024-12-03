@@ -4,9 +4,16 @@ body {
     color: everforest-dark.$fg;
     fill: everforest-dark.$fg;
 }
-.sidebar {
-    background-color: everforest-dark.$bg_green;
-}
-a {
+
+body:not(.home)main a {
     color: everforest-dark.$blue;
+}
+
+body.home, .sidebar {
+    background-color: everforest-dark.$bg_green;
+    color: everforest-dark.$fg;
+    fill: everforest-dark.$fg;
+    a {
+        color: everforest-dark.$fg;
+    }
 }
