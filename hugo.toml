@@ -1,34 +1,66 @@
 baseURL = 'https://example.org/'
 title = 'Fireturtle2025'
 defaultContentLanguage = "en"
-[[menus.main]]
-name = 'Home'
-pageRef = '/'
+
+[[languages.ja.menus.footer]]
+name = 'English'
+url = '/'
 weight = 10
 
-[[menus.main]]
-name = 'Posts'
-pageRef = '/posts'
+[[languages.en.menus.footer]]
+name = '日本語'
+url = '/ja'
 weight = 20
 
-[[menus.main]]
-name = 'Tags'
-pageRef = '/tags'
-weight = 30
+[[languages.en.menus.social]]
+url= "https://github.com/fluo10/hugo-theme-fireturtle2025.git"
+params.simpleIcons= "github.svg"
+weight = 10
 
 [languages.en]
 languageCode = "en-US"
 languageName = "English"
 
+[[languages.en.menus.main]]
+name = 'Home'
+pageRef = '/'
+weight = 10
+
+[[languages.en.menus.main]]
+name = 'Posts'
+pageRef = '/posts'
+weight = 20
+
+[[languages.en.menus.main]]
+name = 'Tags'
+pageRef = '/tags'
+weight = 30
+
 [languages.ja]
 languageCode = "ja-JP"
 languageName = "日本語"
 
+[[languages.ja.menus.main]]
+name = 'Home'
+pageRef = '/'
+weight = 10
+
+[[languages.ja.menus.main]]
+identifier = 'posts'
+name = 'Posts'
+pageRef = '/posts'
+weight = 20
+
+[[languages.ja.menus.main]]
+name = 'Tags'
+pageRef = '/tags'
+weight = 30
 
 [module]
   [module.hugoVersion]
     extended = false
     min = "0.116.0"
+
 [[params.socialIcons]]
 icon= "github.svg"
 url= "https://github.com/fluo10/hugo-theme-fireturtle2025.git"
