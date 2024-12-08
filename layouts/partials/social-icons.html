@@ -1,0 +1,3 @@
+{{- range .Site.params.socialIcons }}
+    <li><svg >{{ printf "assets/simple-icons/icons/%s" .icon | readFile | safeHTML}}</svg></li>
+{{- end }}

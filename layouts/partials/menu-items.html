@@ -36,7 +36,7 @@ Renders a menu for the given menu ID.
             {{- printf " %s=%q" $k $v | safeHTMLAttr }}
           {{- end }}
         {{- end -}}
-      >{{- if .Params.simpleIcons }}<svg>{{ printf "assets/simple-icons/icons/%s" .Params.simpleIcons | readFile | safeHTML}}</svg>{{- end }}{{ $name }}</a>
+      >{{- if .Params.icon }}<svg class="inline-icon" width="1em" height="1em" viewBox="0 0 24 24">{{ printf "assets/lucide/icons/%s" .Params.icon | readFile | safeHTML}}</svg>{{- end }}{{ $name }}</a>
       {{- with .Children }}
         <ul>
           {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}

@@ -1,4 +1,5 @@
 @use "../../modern-normalize/modern-normalize.css";
+@use "footer";
 
 body {
     font-family: monospace;
@@ -6,3 +7,17 @@ body {
 a {
     text-decoration: underline;
 }
+.sidebar {
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+}
+
+header {
+    padding-bottom: auto;
+}
+
+
+
+  

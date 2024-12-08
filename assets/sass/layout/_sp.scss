@@ -1,4 +1,9 @@
+@use "../module/menu";
 @mixin body {
     grid-template-columns: auto;
     grid-template-rows: auto auto auto;
+    ul.footer-menu,
+    ul.social-icons {
+        @include menu.inline-list-center;
+    }
 }

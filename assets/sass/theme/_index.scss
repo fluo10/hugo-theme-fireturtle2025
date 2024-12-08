@@ -17,3 +17,8 @@ body.home, .sidebar {
         color: everforest-dark.$fg;
     }
 }
+
+main>article,
+main>ul>li {
+    background-color: everforest-dark.$bg1;
+}

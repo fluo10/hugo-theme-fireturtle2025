@@ -7,6 +7,10 @@ tags:
 - html
 ---
 
+Markdown syntax guide
+
+<!--more-->
+
 ## Headings
 
 # H1

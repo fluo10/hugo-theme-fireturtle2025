@@ -1,16 +1,22 @@
 baseURL = 'https://example.org/'
-title = 'Fireturtle2025'
+title = 'Fireturtle 2025'
 defaultContentLanguage = "en"
+
+[taxonomies]
+category = 'categories'
+tag = 'tags'
 
 [[languages.ja.menus.footer]]
 name = 'English'
 url = '/'
 weight = 10
+params.icon = 'languages.svg'
 
 [[languages.en.menus.footer]]
 name = '日本語'
 url = '/ja'
 weight = 20
+params.icon = 'languages.svg'
 
 [[languages.en.menus.social]]
 url= "https://github.com/fluo10/hugo-theme-fireturtle2025.git"

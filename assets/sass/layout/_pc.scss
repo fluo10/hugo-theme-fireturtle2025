@@ -1,17 +1,20 @@
+@use "../module/menu";
+
 $max-sidebar-width: 20rem;
-$max-content-width: 40rem;
+$max-content-width: 42rem;
 @mixin body {
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 2fr;
     //grid-template-rows: max-content auto max-content;
     grid-auto-rows: fit-content;
     align-content: space-between;
-    column-gap: 1rem;
+    //column-gap: 1rem;
 
     .sidebar>* {
         width: $max-sidebar-width;
         margin-left: auto;
         margin-right: 1rem;
         text-align: right;
+        overflow: hidden;
     }
 
     header.sidebar {
@@ -33,5 +36,18 @@ $max-content-width: 40rem;
     footer.sidebar {
         grid-column: 1;
         grid-row: 3;
+    }
+    ul.footer-menu,
+    ul.social-icons {
+        @include menu.inline-list-right;
+    }
+    main>* {
+        margin-right: auto;
+        margin-left: 1rem;
+        max-width: $max-content-width;
+    }
+    main>ul>li,
+    main>article {
+        padding:1rem;
     }
 }

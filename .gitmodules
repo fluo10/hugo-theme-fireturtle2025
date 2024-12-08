@@ -1,12 +1,12 @@
 [submodule "assets/simple-icons"]
 	path = assets/simple-icons
 	url = https://github.com/simple-icons/simple-icons.git
-[submodule "assets/ionicons"]
-	path = assets/ionicons
-	url = https://github.com/ionic-team/ionicons.git
 [submodule "assets/modern-normalize"]
 	path = assets/modern-normalize
 	url = https://github.com/sindresorhus/modern-normalize.git
 [submodule "assets/everforest-sass"]
 	path = assets/everforest-sass
 	url = https://github.com/fluo10/everforest-sass.git
+[submodule "assets/lucide"]
+	path = assets/lucide
+	url = https://github.com/lucide-icons/lucide.git

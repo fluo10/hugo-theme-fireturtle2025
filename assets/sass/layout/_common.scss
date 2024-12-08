@@ -1,8 +1,36 @@
-.sidebar{
+@use "../module/menu";
+
+.sidebar,
+body.home>*
+{
     margin: 0;
     overflow-y: hidden;
+    display: grid;
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
 }
 body {
     display: grid;
     height: 100vh;
+}
+
+header{
+    align-content:start;
+}
+footer {
+    align-content:end;
+}
+nav,
+body.home>main {
+    align-content: center;
+}
+main>ul {
+    list-style: none;
+    padding-left: 0;
+}
+ul.tag-list {
+    @include menu.inline-list-left();
+    gap: 0.5em;
 }

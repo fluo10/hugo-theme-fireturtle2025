@@ -1,0 +1,30 @@
+<dl class="page-meta">
+{{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+{{ $dateHuman := .Date | time.Format ":date_medium" }}
+<dt><svg height="1em" viewbox="0 0 24 24" title="{{ T "date_is" }}" aria-label="{{ T "date_is" }}">{{ readFile "assets/lucide/icons/calendar-plus.svg" | safeHTML}}</svg></dt><dd><time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></dd>
+{{ if ne .Lastmod .Date }}
+{{ $dateMachine := .Lastmod | time.Format "2006-01-02T15:04:05-07:00" }}
+{{ $dateHuman := .Lastmod | time.Format ":date_medium" }}
+<dt><svg height="1em" viewbox="0 0 24 24" title="{{ T "lastmod_is" }}" aria-label="{{ T "lastmod_is" }}"></svg>>{{ readFile "assets/lucide/icons/calendar-sync.svg" | safeHTML}}</svg></dt><dd><time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></dd>
+{{ end }}
+{{- with .GetTerms "categories" }}
+    <dt><svg height="1em" viewbox="0 0 24 24" title="{{ T "categories" }}" aria-label="{{ T "categories" }}">{{ readFile "assets/lucide/icons/folder.svg" | safeHTML}}</svg></dt>
+    <dd>
+    <ul>
+    {{- range . }}
+    <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+    {{- end }}
+    </ul>
+    </dd>
+{{- end}}
+{{- with .GetTerms "tags" }}
+    <dt><svg height="1em" viewbox="0 0 24 24" title="{{ T "tags" }}" aria-label="{{ T "tags" }}">{{ readFile "assets/lucide/icons/tags.svg" | safeHTML}}</svg></dt>
+    <dd>
+    <ul>
+    {{- range . }}
+    <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+    {{- end }}
+    </ul>
+    </dd>
+{{- end }}
+</dl>

@@ -1,0 +1,17 @@
+@mixin inline-list {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+@mixin inline-list-right {
+    @include inline-list();
+    justify-content: flex-end;
+}
+@mixin inline-list-center {
+    @include inline-list();
+    justify-content: center;
+}
+@mixin inline-list-left {
+    @include inline-list();
+    justify-content: flex-start;
+}

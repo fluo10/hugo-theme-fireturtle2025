@@ -1,5 +1,10 @@
+@use "../module/menu.scss";
 @mixin body {
     grid-template-columns: auto;
     grid-template-rows: auto auto;
     text-align: center;
+    ul.footer-menu,
+    ul.social-icons {
+        @include menu.inline-list-center;
+    }
 }
