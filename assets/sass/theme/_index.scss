@@ -1,24 +1,9 @@
-@use "../../everforest-sass/everforest-dark";
-body {
-    background-color: everforest-dark.$bg0;
-    color: everforest-dark.$fg;
-    fill: everforest-dark.$fg;
-}
+@use "dark-medium";
+@use "light-medium";
 
-body:not(.home)main a {
-    color: everforest-dark.$blue;
+body.is-dark {
+    @include dark-medium.body();
 }
-
-body.home, .sidebar {
-    background-color: everforest-dark.$bg_green;
-    color: everforest-dark.$fg;
-    fill: everforest-dark.$fg;
-    a {
-        color: everforest-dark.$fg;
-    }
-}
-
-main>article,
-main>ul>li {
-    background-color: everforest-dark.$bg1;
+body:not(.is-dark) {
+    @include light-medium.body();
 }

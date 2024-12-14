@@ -1,7 +1,7 @@
 @use "../module/menu";
 
 $max-sidebar-width: 20rem;
-$max-content-width: 42rem;
+$max-content-width: 41rem;
 @mixin body {
     grid-template-columns: 1fr 2fr;
     //grid-template-rows: max-content auto max-content;

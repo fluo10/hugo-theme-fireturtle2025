@@ -1,0 +1,32 @@
+@use "../../everforest-sass/everforest-dark-fg" as fg;
+@use "../../everforest-sass/everforest-dark-bg-medium" as bg;
+@use "common";
+
+@mixin body() {
+    @include common.body(
+        $bg_dim:    bg.$bg_dim,
+        $bg0:       bg.$bg0,
+        $bg1:       bg.$bg1,
+        $bg2:       bg.$bg2,
+        $bg3:       bg.$bg3,
+        $bg4:       bg.$bg4,
+        $bg5:       bg.$bg5,
+        $bg_red:    bg.$bg_red,
+        $bg_yellow: bg.$bg_yellow,
+        $bg_visual: bg.$bg_visual,
+        $bg_green:  bg.$bg_green,
+        $bg_blue:   bg.$bg_blue,
+        $red:       fg.$red,
+        $orange:    fg.$orange,
+        $yellow:    fg.$yellow,
+        $green:     fg.$green,
+        $blue:      fg.$blue,
+        $aqua:      fg.$aqua,
+        $purple:    fg.$purple,
+        $fg:        fg.$fg,
+        $grey0:     fg.$grey0,
+        $grey1:     fg.$grey1,
+        $grey2:     fg.$grey2
+    );
+}
+
